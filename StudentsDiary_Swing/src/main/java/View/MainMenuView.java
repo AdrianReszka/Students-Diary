@@ -80,6 +80,8 @@ public class MainMenuView {
         addStudentButton.setMaximumSize(buttonSize);
         addStudentButton.setAlignmentX(Component.CENTER_ALIGNMENT);
         addStudentButton.setMnemonic(KeyEvent.VK_1);
+        addStudentButton.setToolTipText("Click to add new student");
+        addStudentButton.getAccessibleContext().setAccessibleName("Add new student");
         addStudentButton.addActionListener(e -> {
             mainMenuController.showAddStudentDialog();
             updateTreeModel();
@@ -91,6 +93,8 @@ public class MainMenuView {
         addGradeButton.setMaximumSize(buttonSize);
         addGradeButton.setAlignmentX(Component.CENTER_ALIGNMENT);
         addGradeButton.setMnemonic(KeyEvent.VK_2);
+        addGradeButton.setToolTipText("Click to add grade to student");
+        addGradeButton.getAccessibleContext().setAccessibleName("Add grade to student");
         addGradeButton.addActionListener(e -> {
             mainMenuController.showAddGradeToStudentDialog();
             updateTreeModel();
@@ -102,6 +106,8 @@ public class MainMenuView {
         removeStudentButton.setMaximumSize(buttonSize);
         removeStudentButton.setAlignmentX(Component.CENTER_ALIGNMENT);
         removeStudentButton.setMnemonic(KeyEvent.VK_3);
+        removeStudentButton.setToolTipText("Click to remove student");
+        removeStudentButton.getAccessibleContext().setAccessibleName("Remove student");
         removeStudentButton.addActionListener(e -> {
             mainMenuController.showRemoveStudentDialog();
             updateTreeModel();
@@ -113,6 +119,8 @@ public class MainMenuView {
         removeGradeButton.setMaximumSize(buttonSize);
         removeGradeButton.setAlignmentX(Component.CENTER_ALIGNMENT);
         removeGradeButton.setMnemonic(KeyEvent.VK_4);
+        removeGradeButton.setToolTipText("Click to remove grade from student");
+        removeGradeButton.getAccessibleContext().setAccessibleName("Remove grade from student");
         removeGradeButton.addActionListener(e -> {
             mainMenuController.showRemoveGradeDialog();
             updateTreeModel();
@@ -124,6 +132,8 @@ public class MainMenuView {
         editStudentButton.setMaximumSize(buttonSize);
         editStudentButton.setAlignmentX(Component.CENTER_ALIGNMENT);
         editStudentButton.setMnemonic(KeyEvent.VK_5);
+        editStudentButton.setToolTipText("Click to edit student data");
+        editStudentButton.getAccessibleContext().setAccessibleName("Edit student data");
         editStudentButton.addActionListener(e -> {
             mainMenuController.showEditStudentDialog();
             updateTreeModel();
@@ -135,6 +145,8 @@ public class MainMenuView {
         editGradeButton.setMaximumSize(buttonSize);
         editGradeButton.setAlignmentX(Component.CENTER_ALIGNMENT);
         editGradeButton.setMnemonic(KeyEvent.VK_6);
+        editGradeButton.setToolTipText("Click to edit student grade");
+        editGradeButton.getAccessibleContext().setAccessibleName("Edit student grade");
         editGradeButton.addActionListener(e -> {
             mainMenuController.showEditGradeDialog();
             updateTreeModel();
@@ -146,6 +158,8 @@ public class MainMenuView {
         displayStudentsButton.setMaximumSize(buttonSize);
         displayStudentsButton.setAlignmentX(Component.CENTER_ALIGNMENT);
         displayStudentsButton.setMnemonic(KeyEvent.VK_7);
+        displayStudentsButton.setToolTipText("Click to display all students and their grades");
+        displayStudentsButton.getAccessibleContext().setAccessibleName("Display all students");
         displayStudentsButton.addActionListener(e -> mainMenuController.showStudentListDialog());
         mainPanel.add(displayStudentsButton);
         mainPanel.add(Box.createRigidArea(new Dimension(0, 10)));
@@ -154,6 +168,8 @@ public class MainMenuView {
         exitButton.setMaximumSize(buttonSize);
         exitButton.setAlignmentX(Component.CENTER_ALIGNMENT);
         exitButton.setMnemonic(KeyEvent.VK_8);
+        exitButton.setToolTipText("Click to exit");
+        exitButton.getAccessibleContext().setAccessibleName("Exit");
         exitButton.addActionListener(e -> mainMenuController.showExitDialog());
         mainPanel.add(exitButton);
 
